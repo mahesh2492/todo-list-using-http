@@ -1,0 +1,20 @@
+<h1>My Tasks</h1>
+<div>
+<p *ngFor="let task of tasks;let index = index">
+
+  <label>Date: </label>{{task.date}}<br>
+  <label>Title: </label>{{task.title}}<br>
+  <label>Description: </label>{{task.description}}<br>
+  <label>Priority: </label>{{task.priority}}<br>
+  <label>_Id: </label>{{task._id}}<br>
+  <!--<input type="button" class=".btn"   value="Edit" (click)=edit(index)>-->
+
+  <!--<input type="button" class=".btn"  value="Delete" (click)=delete(index)><br>-->
+  <button class="edit"
+          (click)="edit(index); $event.stopPropagation()">Edit</button>
+  <button class="delete"
+          (click)="delete(index); $event.stopPropagation()">Delete</button>
+  </p>
+</div>
+'
+  <router-outlet></router-outlet>

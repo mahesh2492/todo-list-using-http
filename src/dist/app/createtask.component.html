@@ -1,0 +1,16 @@
+<br><br>
+<form (ngSubmit)="submit()">
+  <input type="date" required class="form-control" placeholder="dd/mm/yyyy" [(ngModel)]="task.date" name="date" #date="ngModel" ><br>
+  <input type="text" required class="form-control" placeholder="Title" [(ngModel)]="task.title" name="title" #title="ngModel"><br>
+  <input type="text" required  class="form-control" placeholder="Description" [(ngModel)]="task.description" name="description" #description="ngModel"><br>
+  <select [(ngModel)]="task.priority" name="priority" #priority="ngModel"  >
+    <option value="" disabled selected>Priority</option>
+    <option value="high">High</option>
+    <option value="medium">Medium</option>
+    <option value="low">Low</option>
+  </select><br><br>
+  <button type="submit" style="background-color:#eee; font-size: 20px; border: none;
+ font-family: Arial;padding: 5px 10px;
+  border-radius: 4px;">Add</button>
+</form>
+<router-outlet></router-outlet>
